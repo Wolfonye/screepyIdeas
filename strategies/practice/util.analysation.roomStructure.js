@@ -25,7 +25,7 @@ class Room{
         this.sources = [];
         this.name = name;
         for(source in Game.rooms[name].find(FIND_SOURCES)){
-            this.sources.push(new EnergySource(source);
+            this.sources.push(new EnergySource(source));
         }
     }
 }
