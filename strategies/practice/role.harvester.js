@@ -1,45 +1,46 @@
 var roleHarvester = {
     phase: undefined,
-    
+
     /** @param {Creep} creep **/
     run: function(creep) {
+        //nur ein Testkommentar
         /*
         if(this.phase == 'DELIVERING'){
             this.phase = 'SEARCH_FOR_ENERGYSOURCE';
             console.log(this.phase);
         }
-        
+
         if(this.phase == 'MOVING_TO_DELIVERY_POINT'){
-            this.phase = 'DELIVERING';   
+            this.phase = 'DELIVERING';
             console.log(this.phase);
         }
-        
+
         if(this.phase == 'SEARCH_FOR_DELIVERY_POINT'){
             this.phase = 'MOVING_TO_DELIVERY_POINT';
             console.log(this.phase);
         }
-                
+
         if(this.phase == 'HARVESTING'){
             this.phase = 'SEARCH_FOR_DELIVERY_POINT';
             console.log(this.phase);
         }
-        
+
         if(this.phase == 'MOVING_TO_ENERGYSOURCE'){
             this.phase = 'HARVESTING';
             console.log(this.phase);
         }
-        
+
         if(this.phase == 'SEARCH_FOR_ENERGYSOURCE'){
             this.phase = 'MOVING_TO_ENERGYSOURCE';
             console.log(this.phase);
         }
-        
+
         if(this.phase == undefined){
             this.phase = 'SEARCH_FOR_ENERGYSOURCE';
             console.log(this.phase);
         }
         */
-        
+
 	    if(creep.carry.energy < creep.carryCapacity) {
             var source = creep.pos.findClosestByRange(FIND_SOURCES_ACTIVE);
             if(creep.harvest(source) == ERR_NOT_IN_RANGE) {
