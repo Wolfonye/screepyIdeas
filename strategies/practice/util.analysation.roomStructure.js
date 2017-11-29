@@ -1,8 +1,9 @@
 var scanner = require('util.scanning');
 
 var roomStructureAnalyser = {
-    rooms: [],
+    rooms: undefined,
     init: function(){
+        this.rooms = [];
         console.log("Analysing room structure...");
         var allRooms = Game.rooms;
         for(room in allRooms){
