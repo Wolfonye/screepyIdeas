@@ -9,6 +9,9 @@ const throttleMedium = 10;
 const throttleHigh = 20;
 const timerMax = 30;
 
+roomStructure.init();
+roomStructure.printRooms();
+
 module.exports.loop = function () {
 
     var cycle = Game.time % timerMax;
@@ -16,7 +19,6 @@ module.exports.loop = function () {
     }
 
     if(cycle % throttleMedium == 0){
-        roomStructure.printRooms();
     }
 
     if(cycle % throttleHigh == 0){
@@ -59,7 +61,7 @@ module.exports.loop = function () {
     if(Game.spawns['Spawn1RW34N29'].spawning) {
         var spawningCreep = Game.creeps[Game.spawns['Spawn1RW34N29'].spawning.name];
         Game.spawns['Spawn1RW34N29'].room.visual.text(
-            '🛠️' + spawningCreep.memory.role,
+            'ð ï¸' + spawningCreep.memory.role,
             Game.spawns['Spawn1RW34N29'].pos.x + 1,
             Game.spawns['Spawn1RW34N29'].pos.y,
             {align: 'left', opacity: 0.8});

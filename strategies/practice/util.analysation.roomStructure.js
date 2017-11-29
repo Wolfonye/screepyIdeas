@@ -23,9 +23,10 @@ var roomStructureAnalyser = {
 class Room{
     constructor(name){
         this.sources = [];
+        var arr = this.sources;
         this.name = name;
         Game.rooms[name].find(FIND_SOURCES).forEach(function(source){
-            this.sources.push(new EnergySource(source))});
+            arr.push(new EnergySource(source))});
     }
 }
 

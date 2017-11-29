@@ -14,9 +14,9 @@ var scanner = {
     scanForWalkableTerrain: function(room, position, radius = 1){
         var tiles = room.lookForAtArea(LOOK_TERRAIN, position.y - radius, position.x - radius,position.y + radius, position.x + radius,true);
         var walkableTiles = [];
-        for(var i = 0; i < squares.length; i++){
-            if(squares[i]['terrain'] == 'plain' || squares[i]['terrain'] == 'swamp'){
-                walkableTiles.push(squares]i]);
+        for(var i = 0; i < tiles.length; i++){
+            if(tiles[i]['terrain'] == 'plain' || tiles[i]['terrain'] == 'swamp'){
+                walkableTiles.push(tiles[i]);
             }
         }
         return walkableTiles;
