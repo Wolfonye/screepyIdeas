@@ -2,7 +2,7 @@ var roleHarvester = require('role.harvester');
 var roleUpgrader = require('role.upgrader');
 var roleBuilder = require('role.builder');
 var scanner = require('util.scanning');
-var roomStructure = require('util.analysation.rommStructure');
+var roomStructure = require('util.analysation.roomStructure');
 
 const throttleLow = 5;
 const throttleMedium = 10;
