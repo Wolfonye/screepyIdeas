@@ -4,6 +4,7 @@ var roleHarvester = {
     /** @param {Creep} creep **/
     run: function(creep) {
         //nur ein Testkommentar
+        //ein weiterer Testkommentar
         /*
         if(this.phase == 'DELIVERING'){
             this.phase = 'SEARCH_FOR_ENERGYSOURCE';
