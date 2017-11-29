@@ -7,8 +7,8 @@
  * mod.thing == 'a thing'; // true
  */
 var scanner = {
-    scanAreaForCreeps: function(room, position){
-        return room.lookForAtArea(LOOK_CREEPS, position.y - 2, position.x - 2, position.y + 2, position.x + 2, true);
+    scanAreaForCreeps: function(room, position, radius = 2){
+        return room.lookForAtArea(LOOK_CREEPS, position.y - radius, position.x - radius, position.y + radius, position.x + radius, true);
     } 
 }
 module.exports = scanner;
