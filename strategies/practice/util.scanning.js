@@ -9,6 +9,12 @@
 var scanner = {
     scanAreaForCreeps: function(room, position, radius = 2){
         return room.lookForAtArea(LOOK_CREEPS, position.y - radius, position.x - radius, position.y + radius, position.x + radius, true);
-    } 
+    }
+
+    scanForWalkableTerrain: function(room, position, radius = 1){
+        return _filter((room.lookForAtArea(LOOK_TERRAIN, position.y - radius, position.x - radius,position.y + radius, position.x + radius,true), (square) => square['terrain'] == 'swamp' || square['terrain'] == 'plain');
+    }
 }
+
+
 module.exports = scanner;
