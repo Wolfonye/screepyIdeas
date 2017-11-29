@@ -1,11 +1,11 @@
 var roomStructureAnalyser = {
-    rooms: undefined;
+    rooms: undefined,
     init: function(){
         var allRooms = Game.rooms;
         allRooms.forEach(function(item, index){
             var room = new RoomInformation(item.name);
         });
-    }
+    },
     printRooms(){
         var output = "List of all rooms: ";
         rooms.forEach(function(item){
