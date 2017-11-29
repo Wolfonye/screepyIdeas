@@ -12,7 +12,14 @@ var scanner = {
     },
 
     scanForWalkableTerrain: function(room, position, radius = 1){
-        return _filter((room.lookForAtArea(LOOK_TERRAIN, position.y - radius, position.x - radius,position.y + radius, position.x + radius,true), (square) => square['terrain'] == 'swamp' || square['terrain'] == 'plain'));
+        var tiles = room.lookForAtArea(LOOK_TERRAIN, position.y - radius, position.x - radius,position.y + radius, position.x + radius,true);
+        var walkableTiles = [];
+        for(var i = 0; i < squares.length; i++){
+            if(squares[i]['terrain'] == 'plain' || squares[i]['terrain'] == 'swamp'){
+                walkableTiles.push(squares]i]);
+            }
+        }
+        return walkableTiles;
     }
 }
 

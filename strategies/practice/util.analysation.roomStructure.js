@@ -24,11 +24,11 @@ class Room{
     constructor(name){
         this.sources = [];
         this.name = name;
-        for(source in Game.rooms[name].find(FIND_SOURCES)){
-            this.sources.push(new EnergySource(source));
-        }
+        Game.rooms[name].find(FIND_SOURCES).forEach(function(source){
+            this.sources.push(new EnergySource(source))});
     }
 }
+
 
 class EnergySource{
     constructor(source){
